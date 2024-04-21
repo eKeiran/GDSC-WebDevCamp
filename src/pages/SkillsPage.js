@@ -17,7 +17,7 @@ const SkillsPage = () => {
   }, []);
 
   return (
-    <section className='mt-10' id='skills'>
+    <section className='mt-[-5rem]' id='skills'>
       <h2 className='z-[2] text-center mt-5 mb-10'>Skills</h2>
       <div className="grid grid-cols-4 gap-4">
         {skills.map((skill) => (

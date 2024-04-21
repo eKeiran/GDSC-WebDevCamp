@@ -5,8 +5,7 @@ const Footer = () => (
       href='https://gdsc.community.dev/mit-adt-university-pune-india/'
       className='link footer__link'
     >
-      @ Copyright | All Rights Registered 
-    </a>
+Made with ❤ by Keera</a>
   </footer>
 )
 

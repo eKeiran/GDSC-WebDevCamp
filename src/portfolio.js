@@ -30,7 +30,7 @@ const projects = [
   
   {
     name: 'Music Controller Widget',
-    description: 'Ever wanted to control or view the information for a song you are listening to on ANY app with a single glance? This widget makes it possible!',
+    description: 'Ever wanted to control or view the information for a song you are listening to on ANY app with a sixngle glance? This widget makes it possible!',
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
     livePreview: 'https://github.com',
