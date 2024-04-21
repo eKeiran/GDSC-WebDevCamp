@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.text-primary {
+    color: var(--clr-primary);
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+  }
+  
+  .link {
+    margin-right: 0.5rem;
+  }
+  
+  .link-icon {
+    display: inline-flex;
+    align-items: center;
+  }
+  
