@@ -3,8 +3,8 @@ import { GitHub, LinkedIn } from '@mui/icons-material';
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
-import particlesOptions from "../../particles.json"; // Import particles options from particles.json
-import { about } from '../../portfolio';
+import particlesOptions from "../particles.json"; // Import particles options from particles.json
+import { about } from '../portfolio';
 
 const About = () => {
   const [firstName, lastName] = about.length > 0 ? about[0].name.split(' ') : ['', ''];

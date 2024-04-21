@@ -30,10 +30,14 @@ main {
   max-width: 1100px;
   width: 95%;
   margin: 0 auto;
+  z-index: 2;
+
 }
 
 .section {
   margin-top: 5em;
+  z-index: 4;
+
 }
 
 .section__title {

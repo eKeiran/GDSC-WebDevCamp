@@ -1,8 +1,9 @@
-import { useContext, useState } from 'react'
-import Brightness2Icon from '@material-ui/icons/Brightness2'
-import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
+import React, { useContext, useState } from 'react';
+import { WbSunnyRounded, Brightness2 } from '@mui/icons-material';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
 import { ThemeContext } from '../../contexts/theme'
-import { projects, skills, contact } from '../../portfolio'
+import { about, projects, skills, contact } from '../../portfolio'
 
 const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
@@ -16,39 +17,35 @@ const Navbar = () => {
         style={{ zIndex: 3, display: showNavList ? 'flex' : null }}
         className='flex'
       >
+        {about.length ? (
+          <li className='ml-10'>
+            <Link to="/" onClick={toggleNavList} className='link link--nav'> {/* Use Link instead of anchor tag */}
+              about
+            </Link>
+          </li>
+        ) : null}
+
         {projects.length ? (
           <li className='ml-10'>
-            <a
-              href='#projects'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
+            <Link to="/projects" onClick={toggleNavList} className='link link--nav'> {/* Use Link instead of anchor tag */}
               Projects
-            </a>
+            </Link>
           </li>
         ) : null}
 
         {skills.length ? (
           <li className='ml-10  z-[2]'>
-            <a
-              href='#skills'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
+            <Link to="/skills" onClick={toggleNavList} className='link link--nav'> {/* Use Link instead of anchor tag */}
               Skills
-            </a>
+            </Link>
           </li>
         ) : null}
 
         {contact.email ? (
           <li className='ml-10'>
-            <a
-              href='#contact'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
+            <Link to="/contact" onClick={toggleNavList} className='link link--nav'> {/* Use Link instead of anchor tag */}
               Contact
-            </a>
+            </Link>
           </li>
         ) : null}
       </ul>
@@ -59,7 +56,7 @@ const Navbar = () => {
         className='btn btn--icon mt-0 ml-5'
         aria-label='toggle theme'
       >
-        {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
+        {themeName === 'dark' ? <WbSunnyRounded /> : <Brightness2/>}
       </button>
 
     </nav>
