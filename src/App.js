@@ -7,11 +7,11 @@ import {
 
 import { ThemeContext } from './contexts/theme';
 import Header from './components/Header/Header';
-import About from './pages/AboutPage';
-import Projects from './pages/ProjectsPage';
-import SkillsPage from './pages/SkillsPage';
-import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import SkillsPage from './pages/Skills';
+import Contact from './pages/Contact';
 import './App.css';
 
 const App = () => {

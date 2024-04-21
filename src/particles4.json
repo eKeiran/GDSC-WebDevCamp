@@ -2,7 +2,7 @@
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#23283ef"
+      "value": "#23283e"
     },
     "image": "",
     "position": "",
@@ -25,7 +25,7 @@
   "delay": 0,
   "fullScreen": {
     "enable": true,
-    "zIndex": 0
+    "zIndex": -1
   },
   "detectRetina": true,
   "duration": 0,
@@ -154,10 +154,10 @@
   "particles": {
     "bounce": {
       "horizontal": {
-        "value": 0
+        "value": 1
       },
       "vertical": {
-        "value": 0
+        "value": 1
       }
     },
     "collisions": {
@@ -181,12 +181,12 @@
       }
     },
     "color": {
-      "value": "#f00",
+      "value": "#fff",
       "animation": {
         "h": {
           "count": 0,
-          "enable": true,
-          "speed": 30,
+          "enable": false,
+          "speed": 1,
           "decay": 0,
           "delay": 0,
           "sync": true,
@@ -218,11 +218,44 @@
       "options": {},
       "type": []
     },
-    "groups": {},
+    "groups": {
+      "z5000": {
+        "number": {
+          "value": 70
+        },
+        "zIndex": {
+          "value": 50
+        }
+      },
+      "z7500": {
+        "number": {
+          "value": 30
+        },
+        "zIndex": {
+          "value": 75
+        }
+      },
+      "z2500": {
+        "number": {
+          "value": 50
+        },
+        "zIndex": {
+          "value": 25
+        }
+      },
+      "z1000": {
+        "number": {
+          "value": 40
+        },
+        "zIndex": {
+          "value": 10
+        }
+      }
+    },
     "move": {
       "angle": {
         "offset": 0,
-        "value": 90
+        "value": 10
       },
       "attract": {
         "distance": 200,
@@ -238,16 +271,16 @@
         "mode": "percent",
         "radius": 0
       },
-      "decay": 0.1,
+      "decay": 0,
       "distance": {},
-      "direction": "top",
+      "direction": "right",
       "drift": 0,
       "enable": true,
       "gravity": {
         "acceleration": 9.81,
-        "enable": true,
+        "enable": false,
         "inverse": false,
-        "maxSpeed": 200
+        "maxSpeed": 50
       },
       "path": {
         "clamp": true,
@@ -258,18 +291,15 @@
         "options": {}
       },
       "outModes": {
-        "default": "destroy",
-        "bottom": "destroy",
-        "left": "destroy",
-        "right": "destroy",
-        "top": "none"
+        "default": "out",
+        "bottom": "out",
+        "left": "out",
+        "right": "out",
+        "top": "out"
       },
       "random": false,
       "size": false,
-      "speed": {
-        "min": 50,
-        "max": 150
-      },
+      "speed": 5,
       "spin": {
         "acceleration": 0,
         "enable": false
@@ -293,7 +323,7 @@
         "mode": "delete",
         "value": 0
       },
-      "value": 0
+      "value": 200
     },
     "opacity": {
       "value": 1,
@@ -345,8 +375,8 @@
       "width": 0
     },
     "zIndex": {
-      "value": 0,
-      "opacityRate": 1,
+      "value": 5,
+      "opacityRate": 0.5,
       "sizeRate": 1,
       "velocityRate": 1
     },
@@ -370,33 +400,27 @@
     },
     "roll": {
       "darken": {
-        "enable": true,
-        "value": 30
+        "enable": false,
+        "value": 0
       },
-      "enable": true,
+      "enable": false,
       "enlighten": {
-        "enable": true,
-        "value": 30
+        "enable": false,
+        "value": 0
       },
       "mode": "vertical",
-      "speed": {
-        "min": 15,
-        "max": 25
-      }
+      "speed": 25
     },
     "tilt": {
-      "value": {
-        "min": 0,
-        "max": 360
-      },
+      "value": 0,
       "animation": {
-        "enable": true,
-        "speed": 60,
+        "enable": false,
+        "speed": 0,
         "decay": 0,
         "sync": false
       },
-      "direction": "random",
-      "enable": true
+      "direction": "clockwise",
+      "enable": false
     },
     "twinkle": {
       "lines": {
@@ -411,13 +435,10 @@
       }
     },
     "wobble": {
-      "distance": 30,
-      "enable": true,
+      "distance": 5,
+      "enable": false,
       "speed": {
-        "angle": {
-          "min": -15,
-          "max": 15
-        },
+        "angle": 50,
         "move": 10
       }
     },
@@ -433,17 +454,14 @@
       }
     },
     "rotate": {
-      "value": {
-        "min": 0,
-        "max": 360
-      },
+      "value": 0,
       "animation": {
-        "enable": true,
-        "speed": 60,
+        "enable": false,
+        "speed": 0,
         "decay": 0,
         "sync": false
       },
-      "direction": "random",
+      "direction": "clockwise",
       "path": false
     },
     "orbit": {
@@ -509,8 +527,8 @@
       "wait": false
     },
     "rate": {
-      "quantity": 10,
-      "delay": 0.1
+      "quantity": 1,
+      "delay": 7
     },
     "shape": {
       "options": {},
@@ -527,16 +545,45 @@
       "width": 0
     },
     "particles": {
-      "links": {
-        "enable": false
-      },
       "shape": {
-        "type": "circle"
+        "type": "images",
+        "options": {
+          "images": {
+            "src": "https://particles.js.org/images/cyan_amongus.png",
+            "width": 500,
+            "height": 634
+          }
+        }
+      },
+      "size": {
+        "value": 40
+      },
+      "move": {
+        "speed": 10,
+        "outModes": {
+          "default": "none",
+          "right": "destroy"
+        },
+        "straight": true
+      },
+      "zIndex": {
+        "value": 0
+      },
+      "rotate": {
+        "value": {
+          "min": 0,
+          "max": 360
+        },
+        "animation": {
+          "enable": true,
+          "speed": 10,
+          "sync": true
+        }
       }
     },
     "position": {
-      "x": 50,
-      "y": 50
+      "x": -5,
+      "y": 55
     }
   },
   "motion": {

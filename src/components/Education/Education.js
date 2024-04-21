@@ -7,8 +7,8 @@ const Education = () => (
       <span className="text-primary">My Education</span>
     </h2>
     <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <div className="box-container">
-        <div className="box bg-gray-700 flex p-4">
+      <div className="box-container border-solid border-2 border-primary rounded-xl p-4">
+        <div className="box border-spacing-7 flex p-4">
           <div className="image flex-none mr-4">
             <img
               draggable="false"
@@ -22,12 +22,12 @@ const Education = () => (
               B. Tech in CSE
             </h3>
             <p className="mb-2">MIT ADT UNIVERSITY</p>
-            <h4>&nbsp;</h4>
+            <h4>2025 | 8.0 CGPA&nbsp;</h4>
           </div>
         </div>
       </div>
-      <div className="box-container">
-        <div className="box bg-gray-700 flex p-4 mt-4 lg:mt-0">
+      <div className="box-container border-solid border-2 border-primary rounded-xl p-4">
+        <div className="box flex p-4 mt-4 lg:mt-0">
           <div className="image flex-none mr-4">
             <img
               draggable="false"

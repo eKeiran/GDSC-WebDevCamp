@@ -12,7 +12,7 @@ const Navbar = () => {
   const toggleNavList = () => setShowNavList(!showNavList)
 
   return (
-    <nav className='center nav z-[2] mr-5 flex'>
+    <nav className='center nav z-[3] mr-5 flex'>
       <ul
         style={{ zIndex: 3, display: showNavList ? 'flex' : null }}
         className='flex'
