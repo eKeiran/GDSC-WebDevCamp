@@ -5,8 +5,7 @@ import {
   Route
 } from "react-router-dom";
 
-import { ThemeContext } from './contexts/theme';
-import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import SkillsPage from './pages/Skills';
@@ -15,12 +14,11 @@ import Footer from './components/Footer/Footer';
 import './App.css';
 
 const App = () => {
-  const [{ themeName }] = useContext(ThemeContext);
 
   return (
     <BrowserRouter>
-      <div id='top' className={`${themeName} app`}>
-        <Header />
+      <div id='top' className={`dark app`}>
+        <Navbar />
 
         <main>
           <Routes>

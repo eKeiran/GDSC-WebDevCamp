@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import uniqid from 'uniqid';
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadFull } from "tsparticles";
-import particlesOptions from "../particles3.json";
+// import Particles, { initParticlesEngine } from "@tsparticles/react";
+// import { loadFull } from "tsparticles";
+// import particlesOptions from "../particles3.json";
 import { projects } from '../portfolio';
 import ProjectContainer from '../components/ProjectContainer/ProjectContainer';
 
 const Projects = () => {
-  const [particlesVisible, setParticlesVisible] = useState(false);
+  // const [particlesVisible, setParticlesVisible] = useState(false);
 
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadFull(engine);
-    }).then(() => {
-      setParticlesVisible(true);
-    });
-  }, []);
+  // useEffect(() => {
+  //   initParticlesEngine(async (engine) => {
+  //     await loadFull(engine);
+  //   }).then(() => {
+  //     setParticlesVisible(true);
+  //   });
+  // }, []);
 
   if (!projects.length) return null;
 
@@ -29,9 +29,9 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="absolute inset-0 z-[0]">
+      {/* <div className="absolute inset-0 z-[0]">
         {particlesVisible && <Particles options={particlesOptions} />}
-      </div>
+      </div> */}
     </section>
   );
 }

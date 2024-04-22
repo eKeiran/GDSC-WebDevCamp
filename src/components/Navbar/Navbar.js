@@ -1,66 +1,57 @@
-import React, { useContext, useState } from 'react';
-import { WbSunnyRounded, Brightness2 } from '@mui/icons-material';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
-import { ThemeContext } from '../../contexts/theme'
-import { about, projects, skills, contact } from '../../portfolio'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { header, about, projects, skills, contact } from '../../portfolio'
 
 const Navbar = () => {
-  const [{ themeName, toggleTheme }] = useContext(ThemeContext)
-  const [showNavList, setShowNavList] = useState(false)
-
-  const toggleNavList = () => setShowNavList(!showNavList)
 
   return (
-    <nav className='center nav z-[3] mr-5 flex'>
-      <ul
-        style={{ zIndex: 3, display: showNavList ? 'flex' : null }}
-        className='flex'
-      >
-        {about.length ? (
-          <li className='ml-10'>
-            <Link to="/" onClick={toggleNavList} className='link link--nav'> {/* Use Link instead of anchor tag */}
-              about
-            </Link>
-          </li>
-        ) : null}
+    <header className="flex items-center justify-between max-w-screen-lg w-95 mx-auto h-20">
+      <h3>
+        <a
+          href={header.homepage}
+          className="text-blue-300 hover:text-blue-700 hover:underline"
+        >
+          {header.title}
+        </a>
+      </h3>
+      <nav className='center nav z-[3] mr-5 flex'>
+        <ul className='flex'>
 
-        {projects.length ? (
-          <li className='ml-10'>
-            <Link to="/projects" onClick={toggleNavList} className='link link--nav'> {/* Use Link instead of anchor tag */}
-              Projects
-            </Link>
-          </li>
-        ) : null}
+          {about && (
+            <li className='ml-10'>
+              <Link to="/" className='link'>
+                about
+              </Link>
+            </li>
+          )}
 
-        {skills.length ? (
-          <li className='ml-10  z-[2]'>
-            <Link to="/skills" onClick={toggleNavList} className='link link--nav'> {/* Use Link instead of anchor tag */}
-              Skills
-            </Link>
-          </li>
-        ) : null}
+          {projects && (
+            <li className='ml-10'>
+              <Link to="/projects" className='link'>
+                projects
+              </Link>
+            </li>
+          )}
 
-        {contact.email ? (
-          <li className='ml-10'>
-            <Link to="/contact" onClick={toggleNavList} className='link link--nav'> {/* Use Link instead of anchor tag */}
-              Contact
-            </Link>
-          </li>
-        ) : null}
-      </ul>
+          {skills && (
+            <li className='ml-10 z-[2]'>
+              <Link to="/skills" className='link'>
+                skills
+              </Link>
+            </li>
+          )}
 
-      <button
-        type='button'
-        onClick={toggleTheme}
-        className='btn btn--icon mt-0 ml-5'
-        aria-label='toggle theme'
-      >
-        {themeName === 'dark' ? <WbSunnyRounded /> : <Brightness2/>}
-      </button>
-
-    </nav>
+          {contact && (
+            <li className='ml-10'>
+              <Link to="/contact" className='link'>
+                contact
+              </Link>
+            </li>
+          )}
+        </ul>
+      </nav>
+    </header>
   )
 }
 
-export default Navbar
+export default Navbar;

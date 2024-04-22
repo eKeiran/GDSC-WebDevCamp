@@ -3,17 +3,13 @@ const header = {
   title: 'HK.',
 }
 
-const about = [{
-  name: 'Harkeerat Dhunda',
+const about = {
+  firstName: 'Harkeerat',
+  lastName:'Dhunda',
   role: 'Front End Engineer',
   description: 'Hi! I am Harkeerat Dhunda from Pune, India. I am currently working on my B.Tech. in Computer Science. From an early age, I have always loved coding and have created websites for fun and games.',
   resume: 'https://example.com',
-  social: {
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
-  },
 }
-]
 
 const projects = [
 
@@ -43,7 +39,6 @@ const projects = [
       'Collection of CSS Animations! Made for Hacktoberfest and has 12+ contributors. Open Source Project',
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
     backgroundImage: 'https://images8.alphacoders.com/134/thumb-1920-1347727.png'
   },
   {
@@ -52,7 +47,6 @@ const projects = [
       'Upload and detect common objects from images using a pre-trained model online!',
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
     backgroundImage: 'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/22606/images/1446e76-f181-6047-4e73-8d8ba3c6a50e_object_detection_1.webp'
   },
   {
@@ -61,7 +55,6 @@ const projects = [
       'Empowering Legal Professionals With Language Models For Seamless Document Translation, Transliteration, And User Query Handling.',
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
     backgroundImage:'https://miro.medium.com/v2/resize:fit:828/format:webp/1*H5SxV-C9zwOXzcAREPnDQw.jpeg'
   },
   {
@@ -70,10 +63,10 @@ const projects = [
       'Predicting the evolution of stars with machine learning using the dataset from the Open Supernova Catalogue.',
     stack: ['SASS', 'TypeScript', 'React'],
     sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
     backgroundImage:'https://cdn.mos.cms.futurecdn.net/r6VkfLP3F2zbrWXdgeDis-1200-80.jpg'
   },
 ]
+
 const skills = [
   {
     "name": "GitHub",
