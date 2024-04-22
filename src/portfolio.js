@@ -172,9 +172,7 @@ const skills = [
     "name": "NumPy",
     "icon": "https://img.icons8.com/color/48/000000/numpy.png"
   },
- 
- 
-  
+
   
 ]
 
