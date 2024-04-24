@@ -2,11 +2,10 @@
   "name": "gdscfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ekeiran.github.io/GDSC-WebDevCamp/",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.15",
-    "@mui/material": "^5.15.15",
     "@tsparticles/engine": "^3.3.0",
     "@tsparticles/react": "^3.0.0",
     "autoprefixer": "^10.4.19",
