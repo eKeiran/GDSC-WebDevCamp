@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgdscfolio=self.webpackChunkgdscfolio||[]).push([[2093],{2093:(e,a,c)=>{async function i(e){let a=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];const{CircleDrawer:i}=await c.e(4927).then(c.bind(c,4927));await e.addShape("circle",new i,a)}c.d(a,{loadCircleShape:()=>i})}}]);
+//# sourceMappingURL=2093.8ee86fcd.chunk.js.map
