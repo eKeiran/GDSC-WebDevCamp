@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from "react";
-// import Particles, { initParticlesEngine } from "@tsparticles/react";
-// import { loadFull } from "tsparticles";
-// import particlesOptions from "../particles.json";
+import { GitHub, LinkedIn } from '@mui/icons-material';
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadFull } from "tsparticles";
+import particlesOptions from "../particles.json";
 import { about } from '../portfolio';
 import Education from "../components/Education/Education";
 
 
 const About = () => {
-  // const [particlesVisible, setParticlesVisible] = useState(false);
+  const [particlesVisible, setParticlesVisible] = useState(false);
 
-  // useEffect(() => {
-  //   initParticlesEngine(async (engine) => {
-  //     await loadFull(engine);
-  //   }).then(() => {
-  //     setParticlesVisible(true);
-  //   });
-  // }, []);
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadFull(engine);
+    }).then(() => {
+      setParticlesVisible(true);
+    });
+  }, []);
 
   return (
     <div className='flex flex-col items-left mt-12 md:mt-8 relative z-[1]'>
+  
       <div className="grid grid-cols-3 gap-28 items-center z-1">
         {/* Name column */}
         <div className="col-span-1 ">
@@ -40,9 +42,9 @@ const About = () => {
         </div>
       </div>
           {/* Particles */}
-          {/* <div className="absolute inset-0 z-[0]">
+          <div className="absolute inset-0 z-[0]">
         {particlesVisible && <Particles options={particlesOptions} />}
-      </div> */}
+      </div>
       <Education />
 
     </div>

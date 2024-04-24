@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
-// import Particles, { initParticlesEngine } from "@tsparticles/react";
-// import { loadFull } from "tsparticles";
-// import particlesOptions from "../particles4.json";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadFull } from "tsparticles";
+import particlesOptions from "../particles4.json";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  // const [particlesVisible, setParticlesVisible] = useState(false);
+  const [particlesVisible, setParticlesVisible] = useState(false);
 
-  // useEffect(() => {
-  //   initParticlesEngine(async (engine) => {
-  //     await loadFull(engine);
-  //     setParticlesVisible(true);
-  //   });
-  // }, []);
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadFull(engine);
+      setParticlesVisible(true);
+    });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,9 +41,9 @@ const Contact = () => {
           ))}
           <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">Submit</button>
         </form>
-        {/* <div className="absolute inset-0 z-[-1]">
+        <div className="absolute inset-0 z-[-1]">
           {particlesVisible && <Particles options={particlesOptions} />}
-        </div> */}
+        </div>
       </div>
     </section>
   );
