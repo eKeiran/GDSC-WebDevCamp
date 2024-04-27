@@ -52,6 +52,7 @@ const About = () => {
       </div>
       <Education />
     </div>
+    </div>
   );
 };
 
