@@ -32,7 +32,7 @@ const About = () => {
         {/* Image column */}
         <div className="col-span-1 flex justify-center">
           <div className="w-100 h-100 rounded-full overflow-hidden">
-            <img src="/developer-woman.png" alt="Developer Woman" />
+            <img src="developer-woman.png" alt="Developer Woman" />
           </div>
         </div>
 
